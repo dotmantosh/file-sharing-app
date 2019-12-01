@@ -1,0 +1,25 @@
+.container {
+  max-width: 100rem;
+  margin: 0 auto;
+  padding: 10rem 5rem 5rem 5rem;
+  @media (max-width: $screen-small) {
+    padding: 0;
+  }
+}
+
+.header {
+  float: left;
+  color: $header-color;
+  @media (max-width: $screen-small) {
+    float: none;
+    width: 100%;
+  }
+}
+
+.content {
+  float: right;
+  @media (max-width: $screen-small) {
+    float: none;
+    width: 100%;
+  }
+}

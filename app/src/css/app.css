@@ -1,0 +1,241 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+  color: #96a3bb;
+  background-image: linear-gradient(141deg, #2cb5e8 0%, #1fc8db 51%, #9fb8ad 75%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 100rem;
+  margin: 0 auto;
+  padding: 10rem 5rem 5rem 5rem;
+}
+@media (max-width: 37.5em) {
+  .container {
+    padding: 0;
+  }
+}
+
+.header {
+  float: left;
+  color: white;
+}
+@media (max-width: 37.5em) {
+  .header {
+    float: none;
+    width: 100%;
+  }
+}
+
+.content {
+  float: right;
+}
+@media (max-width: 37.5em) {
+  .content {
+    float: none;
+    width: 100%;
+  }
+}
+
+.site-info__name {
+  font-size: 4.2rem;
+  font-weight: 800;
+}
+.site-info__title {
+  font-size: 3.5rem;
+  margin: 2rem 0 0 0;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.8);
+}
+.site-info__slogan {
+  font-size: 2rem;
+  margin: 2rem 0 0 0;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.card {
+  overflow: hidden;
+  position: relative;
+  background-color: White;
+  border-radius: 5px;
+  width: 30rem;
+}
+.card__header {
+  background: #f7f3ff;
+}
+.card__header--inner {
+  padding: 2rem;
+}
+.card__content--inner {
+  padding: 2rem;
+}
+.card .selected-files {
+  max-height: 15rem;
+  position: relative;
+  height: auto;
+  overflow: auto;
+  background: white;
+  margin: -2rem -2rem 2rem -2rem;
+  padding: 2rem;
+}
+.card .selected-files__item {
+  display: flex;
+  border-bottom: 0.1rem solid rgba(0, 0, 0, 0.08);
+  padding: 0.5rem 0;
+  align-content: center;
+  align-items: center;
+}
+.card .selected-files__item .filename {
+  flex-grow: 1;
+}
+.card .selected-files__item .file-remove {
+  border: 0 none;
+  padding: 0.3rem;
+  font-weight: 300;
+  background: none;
+}
+.card .select-file {
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+.card .select-file label {
+  display: block;
+  width: 100%;
+}
+.card .select-file input {
+  position: fixed;
+  top: -9999rem;
+}
+.card .select-file.error .upload-icon {
+  border: 0.1rem dashed #d0152e;
+}
+.card .upload-description {
+  font-size: 1.2rem;
+  display: block;
+}
+.card .upload-icon {
+  display: inline-block;
+  width: 8rem;
+  height: 4rem;
+  border: 0.1rem dashed #96a3bb;
+  margin-bottom: 1rem;
+}
+.card .app-form-item {
+  margin-bottom: 1rem;
+}
+.card .app-form-item label {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 0.8rem;
+  display: block;
+}
+.card .app-form-item input[type=text],
+.card .app-form-item textarea {
+  width: 100%;
+  border: 0.1px solid #f4f4f4;
+  outline: 0 none;
+  padding: 1rem;
+}
+.card .app-form-item input[type=text]:focus,
+.card .app-form-item input[type=text] :active,
+.card .app-form-item textarea:focus,
+.card .app-form-item textarea :active {
+  outline: 0 none;
+}
+.card .app-form-item .app-btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 0.7rem 1.5rem;
+  color: #2cb5e8;
+  font-weight: 800;
+  border: 0.1rem solid #2cb5e8;
+  border-radius: 3px;
+  background: white;
+}
+.card .app-form-item .app-btn__primary {
+  background: #2cb5e8;
+  color: white;
+}
+.card .app-form-item.error input, .card .app-form-item.error ::-webkit-input-placeholder {
+  color: #d0152e;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.error {
+  color: #d0152e;
+  border-color: #d0152e;
+}
+
+/*# sourceMappingURL=app.css.map */
